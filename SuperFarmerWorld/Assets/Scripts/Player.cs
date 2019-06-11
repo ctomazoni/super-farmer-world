@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
             transform.Translate(Vector2.right * velocidade * Time.deltaTime);
             transform.eulerAngles = new Vector2(0, 180);
         }
-        if (Input.GetButtonDown("Jump") && isGrounded && !jumped)
+        if (Input.GetButtonDown("Jump") /*&& isGrounded*/ && !jumped)
         {
             GetComponent<Rigidbody2D>().AddForce(transform.up * force);
             jumpTime = jumpDelay;
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
 
         jumpTime -= Time.deltaTime;
 
-        if (jumpTime <= 0 && isGrounded && jumped)
+        if (jumpTime <= 0 /*&& isGrounded*/ && jumped)
         {
             animator.SetTrigger("ground");
             jumped = false;
