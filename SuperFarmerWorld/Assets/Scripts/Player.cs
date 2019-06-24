@@ -28,6 +28,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movimentar();
+        if (player.position.y < -2)
+        {
+            GameObject.FindGameObjectWithTag("Placar").GetComponent<Placar>().vidas = 0;
+        }
     }
 
     void Movimentar()

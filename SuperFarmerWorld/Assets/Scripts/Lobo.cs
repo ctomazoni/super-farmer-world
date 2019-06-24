@@ -45,7 +45,7 @@ public class Lobo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            GameObject.FindGameObjectWithTag("Placar").GetComponent<Placar>().vidas -= 1;
         }
     }
 }

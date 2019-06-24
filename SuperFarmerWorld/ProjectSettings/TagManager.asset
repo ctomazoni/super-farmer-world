@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Placar
-  - QtdRestante
+  - Vida3
+  - Vida2
+  - Status
+  - Vida1
   layers:
   - Default
   - TransparentFX
