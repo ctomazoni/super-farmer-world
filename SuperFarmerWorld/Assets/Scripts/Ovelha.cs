@@ -21,6 +21,7 @@ public class Ovelha : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("Placar").GetComponent<Placar>().ovelhasRestantes -= 1;
         }
     }
 }
